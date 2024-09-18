@@ -46,7 +46,7 @@ app.get('/nft', async (req, res) => {
 
 
 async function getDbInstance(collectionName) {
-    const url = process.env.MONGODB_URI;
+    const url = "mongodb+srv://jenithcodearies:Htril1dr9J@cluster0.3cl2y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
     const client = new MongoClient(url);
 
     await client.connect();
@@ -57,8 +57,7 @@ async function getDbInstance(collectionName) {
     return collection;
 }
 
-const port = process.env.PORT || 3001;
-app.listen(port, () => {
+app.listen("3001", () => {
     console.log('Server is running on port 3001');
 
 });
